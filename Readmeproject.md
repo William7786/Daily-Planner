@@ -1,0 +1,1 @@
+First I applied the general styling and container elements to the page.
