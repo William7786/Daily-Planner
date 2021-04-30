@@ -72,7 +72,7 @@ textarea {
 section{
   height: 60px;
   width: 80%;
-  background-color: #555;
+  background-color: rgb(102, 102, 102);
   margin:auto;
   margin-top: 2px;
   padding: 10px;
@@ -84,8 +84,11 @@ section:hover{
   height: 65px;
   width: 82%;
   margin-top: 4px;
-  margin-bottom:4px;
+  margin-bottom:7px;
   box-shadow: 10px 10px 5px rgba(43, 42, 42, 0.836);
+  -webkit-transform:scale(1.2) ;
+  -ms-transform:scale(1.2);
+  transform:scale(1.2);
 }
 input{
   border-radius: 4px;
