@@ -7,7 +7,12 @@ console.log(today.format("h:mm a"))
 var text = document.getElementById ("text")
 let chores = []
 
+const save = document.getElementByClass ("saveBtn")
+save.click(function(event){
+event.preventDefault();
 localStorage.setItem('text', JSON.stringify(itemsArray))
 const data = JSON.parse(localStorage.getItem('text'))
+})
+
 
   
