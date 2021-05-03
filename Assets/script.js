@@ -4,15 +4,27 @@ console.log(today.format("ddd MMM do  YYYY"))
 $("#time").text(today.format("h:mm a"))
 console.log(today.format("h:mm a"))
 
-var text = document.getElementById ("text")
-let chores = []
 
-const save = document.getElementByClass ("saveBtn")
-save.click(function(event){
-event.preventDefault();
-localStorage.setItem('text', JSON.stringify(itemsArray))
-const data = JSON.parse(localStorage.getItem('text'))
+const storage = document.querySelector(".store");
+const text = document.querySelector(".text2");
+const btn = document.querySelector(".saveBtn");
+const stored = localStorage.getItem("text", text.textContent)
+if(storage){
+text.textContent = stored
+}   
+storage.addEventListener("input", p => {
+text.textContent = p.target.value
+console.log(p.target.value)
 })
+const save = () => {
+localStorage.setItem("text", text.textContent)
+}
+
+btn.addEventListener("click", save)
 
 
-  
+
+
+
+
+
